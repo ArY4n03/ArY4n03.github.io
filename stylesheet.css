@@ -1,149 +1,63 @@
-/* Cyberpunk Dark Theme Portfolio */
+/* Light Cyberpunk Portfolio Theme */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Orbitron', 'Roboto Mono', monospace; /* techy futuristic fonts */
+  font-family: 'Orbitron', 'Roboto Mono', monospace;
 }
 
-/* Body background */
+/* Body */
 body {
-  background: linear-gradient(135deg, #0f0f15, #1c1c2a, #0a0a12); /* moody cyberpunk night */
-  color: #ccc;
+  background: linear-gradient(135deg, #e6f0ff, #f5e6ff, #ffffff);
+  color: #222;
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 60px;
+}
+
+/* Subtle grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
 }
 
 /* Header */
 header {
   text-align: center;
   padding: 2.5rem 1rem;
-  background: rgba(20, 20, 35, 0.85);
-  border-bottom: 2px solid #1e90ff; /* subtle cyber accent */
-  box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
-  position: relative;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(30, 144, 255, 0.05),
-    rgba(30, 144, 255, 0.05) 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  pointer-events: none;
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid #00bfff;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 header h1 {
   font-size: 3rem;
-  color: #1e90ff;
+  color: #0077ff;
   letter-spacing: 2px;
-  text-shadow: 0 0 5px #1e90ff, 0 0 15px #ff0080;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
 }
 
 header p {
   font-size: 1.2rem;
-  color: #ff77ff;
-  text-shadow: 0 0 5px #ff77ff, 0 0 10px #1e90ff;
+  color: #cc00ff;
 }
 
-/* Sections */
-section {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: rgba(15, 15, 25, 0.85);
-  border-radius: 10px;
-  border-left: 5px solid #1e90ff;
-  box-shadow: 0 0 20px rgba(30,144,255,0.2);
-  backdrop-filter: blur(5px);
-}
-
-section h2 {
-  color: #ff77ff;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-section h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #1e90ff;
-  margin-top: 5px;
-  box-shadow: 0 0 10px #1e90ff, 0 0 20px #ff77ff;
-}
-
-/* Adjusted card size for compact cyberpunk vibe */
-.card {
-  background: rgba(20,20,35,0.7);
-  border-radius: 8px;
-  margin: 0.8rem 0;
-  padding: 0.8rem;        /* smaller padding */
-  text-align: center;
-  border: 1px solid #1e90ff;
-  box-shadow: 0 0 8px rgba(30,144,255,0.2), inset 0 0 3px rgba(255,0,128,0.2); /* slightly less intense */
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 400px;       /* limit card width */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card:hover {
-  transform: translateY(-3px) rotateZ(0.5deg); /* subtle hover effect */
-  box-shadow: 0 0 15px #1e90ff, 0 0 20px #ff77ff inset;
-}
-
-.card h3 {
-  color: #ff77ff;
-  margin-bottom: 0.4rem;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
-}
-
-.card p {
-  color: #aaa;
-  font-size: 0.9rem;   /* slightly smaller text */
-}
-
-.card a {
-  color: #1e90ff;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 3px;
-  font-size: 0.9rem;  /* smaller link text */
-}
-
-.card a:hover {
-  color: #ff77ff;
-  text-shadow: 0 0 4px #ff77ff, 0 0 10px #1e90ff;
-}
-
-/* Project images smaller for compact card */
-.project-img {
-  width: 100%;
-  max-height: 180px;  /* smaller height */
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 0.8rem;
-  border: 1px solid #333;
-  box-shadow: 0 0 8px rgba(30,144,255,0.2), 0 0 12px rgba(255,0,128,0.2) inset;
-}
 /* Navbar */
 .navbar {
-  position: fixed;       /* stays on top while scrolling */
+  position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(15, 15, 25, 0.95);
-  border-bottom: 2px solid #1e90ff;
-  box-shadow: 0 2px 12px rgba(30,144,255,0.2);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #00bfff;
+  box-shadow: 0 2px 12px rgba(0,191,255,0.2);
   z-index: 999;
 }
 
@@ -159,70 +73,157 @@ section h2::after {
 }
 
 .navbar a {
-  color: #ff77ff;
+  color: #cc00ff;
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Orbitron', 'Roboto Mono', monospace;
   letter-spacing: 1px;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: all 0.3s;
 }
 
 .navbar a:hover {
-  color: #1e90ff;
-  text-shadow: 0 0 5px #1e90ff, 0 0 15px #ff77ff;
+  color: #0077ff;
+  text-shadow: 0 0 10px rgba(0,191,255,0.7);
 }
 
-/* Add top padding to body so content isn't hidden behind navbar */
-body {
-  padding-top: 60px; /* adjust if navbar height changes */
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border-left: 5px solid #00bfff;
+  box-shadow: 0 0 20px rgba(0,191,255,0.15);
+  backdrop-filter: blur(10px);
 }
-/* Project images */
+
+section h2 {
+  color: #cc00ff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00bfff;
+  margin-top: 5px;
+  box-shadow: 0 0 10px #00bfff;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  box-shadow: 
+    0 0 10px rgba(0,191,255,0.2),
+    inset 0 0 5px rgba(255,0,150,0.2);
+  transition: all 0.3s ease;
+  max-width: 400px;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 0 20px rgba(0,191,255,0.6),
+    0 0 30px rgba(255,0,150,0.4);
+}
+
+.card h3 {
+  color: #cc00ff;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* Links */
+.card a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.card a:hover {
+  text-shadow: 0 0 8px #00bfff, 0 0 12px #ff00cc;
+}
+
+/* Images */
 .project-img {
   width: 100%;
-  height: auto;
+  max-height: 180px;
+  object-fit: cover;
   border-radius: 5px;
-  margin-bottom: 1rem;
-  border: 1px solid #333;
-  box-shadow: 0 0 10px rgba(30,144,255,0.3), 0 0 15px rgba(255,0,128,0.2) inset;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
 }
 
-/* Contact section */
+.project-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #ff00cc, 0 0 25px #00bfff inset;
+}
+
+/* Contact */
 #contact p {
   margin: 0.5rem 0;
 }
 
 #contact a {
-  color: #1e90ff;
+  color: #0077ff;
   text-decoration: none;
 }
 
 #contact a:hover {
-  color: #ff77ff;
-  text-shadow: 0 0 5px #ff77ff, 0 0 10px #1e90ff;
+  text-shadow: 0 0 8px #00bfff, 0 0 12px #ff00cc;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(20,20,35,0.9);
-  border-top: 1px solid #1e90ff;
-  color: #888;
+  background: rgba(255,255,255,0.7);
+  border-top: 1px solid #00bfff;
+  color: #555;
   font-size: 0.9rem;
 }
 
-/* Subtle flicker/glitch effect */
-@keyframes glitch {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 22%, 24%, 55% { opacity: 0.85; transform: skewX(-2deg); }
-}
-
-header h1, section h2 {
-  animation: glitch 3s infinite;
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  header h1 { font-size: 2rem; }
-  section h2 { font-size: 1.5rem; }
+  .card {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+}
+/* Web Games Grid Layout */
+#Web-Games {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Make cards take full width inside grid */
+#Web-Games .card {
+  max-width: 100%;
+  width: 100%;
 }
